@@ -1,10 +1,10 @@
 import { Sequelize } from "sequelize-typescript";
 
 const sequelize: Sequelize = new Sequelize({
-  username: process.env.DB_USER,
+  username: process.env.DB_USER || "root",
   password: process.env.DB_PASSWORD,
-  database: process.env.DB,
-  host: process.env.DB_HOST,
+  database: process.env.DB || "test",
+  host: process.env.DB_HOST || "localhost",
   dialect: "mysql",
 });
 
